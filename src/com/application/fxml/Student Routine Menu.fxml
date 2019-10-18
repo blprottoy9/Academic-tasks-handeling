@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#mouseDragged" onMousePressed="#mousePressed" prefHeight="493.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.fxml.StuRoutineMenuController">
+   <center>
+      <VBox fx:id="vBoxCenter" prefHeight="327.0" prefWidth="425.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="stuRouTableview" prefHeight="348.0" prefWidth="708.0">
+              <columns>
+                <TableColumn fx:id="weekDaysTableColumn" prefWidth="110.0" text="Week Days" />
+                <TableColumn fx:id="timeTableColumns" minWidth="0.0" prefWidth="597.0" text="Time" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <VBox fx:id="vBoxTop" alignment="CENTER" prefHeight="75.0" prefWidth="708.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="141.0" text="Routine" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox fx:id="vBoxButtom" alignment="CENTER" prefHeight="79.0" prefWidth="708.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="stuRouBackButton" mnemonicParsing="false" onAction="#getUserMenu" prefHeight="42.0" prefWidth="125.0" text="Back">
+               <graphic>
+                  <MaterialIconView fill="WHITE" glyphName="KEYBOARD_RETURN" size="20" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

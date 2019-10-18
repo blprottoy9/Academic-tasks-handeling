@@ -1,0 +1,34 @@
+.root{
+	-fx-background-image:url('Image/bg1.jpg');
+	-fx-background-size:cover;
+	-fx-text-fill: white;
+}
+.button{
+
+	-fx-background-color: green;
+	-fx-text-fill: #eeebeb;
+	-fx-background-radius: 100;
+	-fx-font-family: Quicksand;
+	-fx-font-weight: bold;
+}
+.button:hover{
+	-fx-background-color:#009900;
+}
+#vBoxTop
+{
+	-fx-background-color:#333333;
+}
+#spiltPane
+{
+	-fx-background-color:white;
+}
+#vBoxButtom
+{
+	-fx-background-color:#333333;
+}
+#courseTableColumn{
+	-fx-alignment: center;
+	-fx-text-alignment: center;
+	-fx-font-size: 14px;
+	-fx-text-fill: red;
+}

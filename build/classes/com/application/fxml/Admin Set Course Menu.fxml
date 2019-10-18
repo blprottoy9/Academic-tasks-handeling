@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#mouseDragged" onMousePressed="#mousePressed" prefHeight="424.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.fxml.AdmSetCourseController">
+   <center>
+      <SplitPane fx:id="spilltPane" dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tableview" editable="true" layoutX="14.0" layoutY="54.0" onMouseClicked="#getSelectedItem" prefHeight="367.0" prefWidth="195.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="courseCodeColumn" prefWidth="194.0" text="Course Codes" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <BorderPane layoutX="53.0" layoutY="80.0" prefHeight="398.0" prefWidth="416.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <center>
+                        <VBox prefHeight="321.0" prefWidth="416.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="BOTTOM_CENTER" prefHeight="33.0" prefWidth="416.0" spacing="10.0" />
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="196.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="266.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Course Code: " GridPane.rowIndex="1" />
+                                    <Label text="Date: " />
+                                    <Label fx:id="courseCodeLabel" prefHeight="20.0" prefWidth="84.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label text="Faculty: " GridPane.rowIndex="2" />
+                                    <TextField fx:id="facTextField" maxWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <DatePicker fx:id="yearDatePicker" onAction="#getYear" prefHeight="25.0" prefWidth="150.0" GridPane.columnIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <HBox alignment="CENTER" prefHeight="31.0" prefWidth="416.0" spacing="10.0">
+                                 <children>
+                                    <Label text="Weekdays and Time">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="194.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="268.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Sunday: " />
+                                    <Label text="Monday: " GridPane.rowIndex="1" />
+                                    <Label text="Tuesday: " GridPane.rowIndex="2" />
+                                    <Label text="Wednesday: " GridPane.rowIndex="3" />
+                                    <Label text="Thrusday: " GridPane.rowIndex="4" />
+                                    <ChoiceBox fx:id="sunChoicebox" prefWidth="150.0" GridPane.columnIndex="1" />
+                                    <ChoiceBox fx:id="monChoicebox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <ChoiceBox fx:id="tuesChoicebox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <ChoiceBox fx:id="wedChoicebox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <ChoiceBox fx:id="thuChoicebox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </center>
+                     <bottom>
+                        <VBox alignment="CENTER" prefHeight="43.0" prefWidth="416.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                                 <children>
+                                    <Button fx:id="insertButton" mnemonicParsing="false" onAction="#setCourses" prefHeight="30.0" prefWidth="80.0" text="Insert">
+                                       <graphic>
+                                          <MaterialIconView fill="#f5f5f5" glyphName="INPUT" size="15" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteCourse" prefHeight="30.0" prefWidth="80.0" text="Delete">
+                                       <graphic>
+                                          <MaterialDesignIconView fill="#f8f3f3" glyphName="DELETE" size="20" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets top="5.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+   <top>
+      <HBox fx:id="hBoxTop" alignment="CENTER" prefHeight="49.0" prefWidth="665.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="142.0" text="Set Courses" textFill="#f5f3f3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <VBox fx:id="hBoxButtom" alignment="CENTER" prefHeight="53.0" prefWidth="598.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#getUserMenu" prefHeight="35.0" prefWidth="75.0" text="Back">
+               <graphic>
+                  <MaterialIconView fill="#fffefe" glyphName="KEYBOARD_RETURN" size="20" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

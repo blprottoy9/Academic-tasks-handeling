@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+<AnchorPane fx:id="loginAnchor" maxHeight="550.0" maxWidth="750.0" onMouseDragged="#mouseDragged" onMousePressed="#mousePressed" prefHeight="0.0" prefWidth="0.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.fxml.LoginControler">
+   <children>
+      <MediaView fx:id="mediaView" fitHeight="600.0" fitWidth="800.0" x="375.0" y="225.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <viewport>
+            <Rectangle2D minX="750.0" minY="550.0" />
+         </viewport>
+      </MediaView>
+      <VBox alignment="CENTER" layoutX="132.0" prefHeight="521.0" prefWidth="429.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="135.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <StackPane prefHeight="350.0" prefWidth="417.0">
+               <children>
+                  <VBox prefHeight="350.0" prefWidth="442.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="89.0" prefWidth="417.0">
+                           <children>
+                              <ImageView fx:id="imageId" fitHeight="79.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hBoxUser" alignment="CENTER" minWidth="183.0" prefHeight="101.0" prefWidth="417.0" spacing="5.0" style="-fx-background-color: white;">
+                           <children>
+                              <FontAwesomeIconView fontSmoothingType="LCD" glyphName="USER" size="20" wrappingWidth="12.0" />
+                              <JFXTextField fx:id="uid" focusColor="#b92414" labelFloat="true" maxWidth="222.0" minWidth="183.0" prefHeight="25.0" prefWidth="210.0" promptText="User Id" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hBoxPass" alignment="CENTER" prefHeight="77.0" prefWidth="417.0" style="-fx-background-color: white;">
+                           <children>
+                              <FontAwesomeIconView glyphName="KEY" size="22" />
+                              <JFXPasswordField fx:id="pwd" focusColor="#b92414" labelFloat="true" maxWidth="222.0" minWidth="183.0" prefHeight="25.0" prefWidth="206.0" promptText="Password" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hBoxButton" alignment="CENTER" prefHeight="95.0" prefWidth="417.0" spacing="10.0" style="-fx-background-color: white;">
+                           <children>
+                              <Button fx:id="log_in" mnemonicParsing="false" onAction="#getUserMenu" prefHeight="38.0" prefWidth="95.0" text="Login" textFill="#eeebeb">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="#f8f7f7" glyphName="LOGIN" size="20" />
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#destroyMenu" prefHeight="38.0" prefWidth="95.0" text="Cancel" textFill="#fffdfd">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#f8f7f7" glyphName="CLOSE" size="20" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

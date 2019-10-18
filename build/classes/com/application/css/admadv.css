@@ -1,0 +1,53 @@
+.root{
+	-fx-background-image:url('Image/bg1.jpg');
+	-fx-background-size:cover;
+	-fx-text-fill: white;
+}
+#btAdv:hover{
+	-fx-background-color: #595959;
+}
+#btEva:hover{
+	-fx-background-color:#595959;
+}
+#btAdv
+{
+	-fx-max-width: 209;
+	-fx-max-height: 39;
+}
+#btEva
+{
+	-fx-max-width: 209;
+	-fx-max-height: 39;
+}
+
+.button{
+	-fx-max-width: 102;
+	-fx-max-height: 28;
+	-fx-border-width:1px;
+	-fx-border-color:white;
+	-fx-background-color:  #4d4d4d;
+	-fx-text-fill: white;
+	-fx-font-family: Quicksand;
+	-fx-font-weight: bold;
+}
+#ancMenu
+{
+	-fx-background-color: #333333;
+}
+#ancBorderPane
+{
+	-fx-background-color: white;
+}
+#hBoxLabel
+{
+	-fx-background-color:  #262626;
+
+
+}
+#ancButton
+{
+	-fx-background-color: #333333;
+}
+.button:hover{
+	-fx-background-color:#595959;
+}

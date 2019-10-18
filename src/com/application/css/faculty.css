@@ -1,0 +1,47 @@
+.root{
+	-fx-background-image:url('Image/bg1.jpg');
+	-fx-background-size:cover;
+	-fx-text-fill: white;
+}
+#hBoxLabel
+{
+	-fx-background-color: #333333;
+}
+#hBoxGrade
+{
+	-fx-background-color: white;
+}
+#hBoxCP
+{
+	-fx-background-color: white;
+}
+#hBoxStu
+{
+	-fx-background-color: white;
+}
+#hBoxRoutine
+{
+	-fx-background-color: white;
+}
+#hBoxLogOut
+{
+	-fx-background-color: white;
+}
+#hBoxSR
+{
+	-fx-background-color: white;
+}
+.button{
+	-fx-background-color: green;
+	-fx-text-fill: #eeebeb;
+	-fx-background-radius: 100;
+	-fx-font-family: Quicksand;
+	-fx-font-weight: bold;
+}
+.button:hover{
+	-fx-background-color:#009900;
+}
+.label
+{	-fx-text-fill: white;
+
+}
